@@ -1,0 +1,330 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+}
+:root {
+  --main-btn-blue: #0075ff;
+  --second-color: #888;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --gray-color: #eee;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* ============================== */
+.our_page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+}
+.mainNav {
+  max-width: 250px;
+}
+@media (max-width: 768px) {
+  .mainNav {
+    max-width: 80px;
+  }
+}
+
+.mainNav .title {
+  padding: 20px 0 20px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+}
+.mainNav .title::before,
+.mainNav .title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 50%);
+  -webkit-transform: translate(50%, 50%);
+  -moz-transform: translate(50%, 50%);
+  -ms-transform: translate(50%, 50%);
+  -o-transform: translate(50%, 50%);
+}
+.mainNav .title::before {
+  width: 12px;
+  height: 12px;
+  background-color: black;
+  border: 8px solid white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.mainNav .title::after {
+  width: 100px;
+  height: 2px;
+  background-color: black;
+  z-index: -1;
+}
+@media (max-width: 768px) {
+  .mainNav .title::before,
+  .mainNav .title::after {
+    display: none;
+  }
+}
+.mainNav .links {
+  margin: 40px 30px;
+}
+.mainNav .links li {
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 10px 30px 10px 5px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.mainNav .links li a {
+  display: flex;
+  justify-content: left;
+}
+.mainNav .links li.active {
+  background-color: #f6f6f6;
+}
+.mainNav .links li:hover {
+  background-color: #f6f6f6;
+}
+.mainNav .links i {
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .mainNav .links li span {
+    display: none;
+  }
+}
+/* ============================================ */
+/*   header */
+
+.sectinos {
+  width: 100%;
+}
+.sectinos .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+.sectinos .header .inp {
+  position: relative;
+}
+.sectinos .header .inp i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  color: #ccc;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.sectinos .header .inp input {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  width: 130px;
+  padding: 10px 20px;
+  outline: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: width 0.5s;
+  -webkit-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  -ms-transition: width 0.5s;
+  -o-transition: width 0.5s;
+}
+.sectinos .header .inp input:focus {
+  width: 160px;
+}
+.sectinos .header .inp input:focus::placeholder {
+  color: transparent;
+}
+.sectinos .header .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectinos .header .right span {
+  margin-right: 20px;
+  position: relative;
+}
+
+.sectinos .header .right span::before {
+  position: absolute;
+  content: "";
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.sectinos .header .right img {
+  width: 35px;
+}
+
+/* end header */
+/* ==================================== */
+.sectinos .plans {
+  background-color: #f1f5f9;
+  padding: 10px;
+}
+.sectinos .plans > h1 {
+  position: relative;
+  margin-left: 5px;
+  padding: 25px;
+}
+.sectinos .plans > h1::before,
+.sectinos .plans > h1::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  left: 30px;
+  bottom: 5px;
+}
+.sectinos .plans h1::before {
+  width: 50px;
+  background-color: black;
+  z-index: 2;
+}
+
+.sectinos .plans h1::after {
+  width: 140px;
+  background-color: white;
+  z-index: 1;
+}
+.sectinos .plans .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 30px;
+  margin: 15px 10px;
+}
+@media (max-width: 768px) {
+  .sectinos .plans .cards {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+.card {
+  overflow: hidden;
+  padding: 15px;
+  background-color: white;
+}
+.card h2 {
+  margin-bottom: 10px;
+}
+.card .price {
+  background-color: var(--green-color);
+  border: 4px solid white;
+
+  padding: 20px 10px;
+}
+#free .price {
+  outline: 4px solid var(--green-color);
+  background-color: var(--green-color);
+}
+#basic .price {
+  outline: 4px solid var(--main-btn-blue);
+  background-color: var(--main-btn-blue);
+}
+#premium .price {
+  outline: 4px solid var(--orange-color);
+  background-color: var(--orange-color);
+}
+.card .price h1,
+.card .price h2 {
+  color: white;
+  text-align: center;
+}
+.card .price h1 {
+  font-size: 40px;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+.card .price h1:before {
+  content: "\24";
+  position: absolute;
+  background-color: transparent;
+  font-size: 30px;
+  left: -40px;
+  top: -10px;
+}
+.card .content {
+  display: flex;
+  border-bottom: 2px solid var(--gray-color);
+  margin-top: 24px;
+  padding: 0 0 15px;
+}
+.card .content i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+.card .content i.correct {
+  color: var(--green-color);
+}
+.card .content i.wrong {
+  color: var(--red-color);
+}
+.card .content div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.card .content div i {
+  color: var(--second-color);
+}
+.card a {
+  width: fit-content;
+  padding: 8px 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-top: 10px;
+  display: block;
+  color: white;
+}
+.card a.free {
+  background-color: var(--green-color);
+}
+
+.card a.basic {
+  background-color: var(--main-btn-blue);
+}
+.card a.premium {
+  background-color: var(--orange-color);
+}
+.card > p {
+  text-align: center;
+  color: var(--second-color);
+  margin-top: 20px;
+}
