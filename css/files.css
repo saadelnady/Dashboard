@@ -5,6 +5,7 @@
   font-family: "Open Sans", sans-serif;
   color: black;
 }
+
 :root {
   --main-btn-blue: #0075ff;
   --second-color: #888;
@@ -13,22 +14,27 @@
   --red-color: #f44336;
   --gray-color: #eee;
 }
+
 li {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
 
 /* ============================== */
+
 .our_page {
   display: flex;
   align-items: flex-start;
   justify-content: start;
 }
+
 .mainNav {
   max-width: 250px;
 }
+
 @media (max-width: 768px) {
   .mainNav {
     max-width: 80px;
@@ -41,6 +47,7 @@ a {
   text-align: center;
   position: relative;
 }
+
 .mainNav .title::before,
 .mainNav .title::after {
   content: "";
@@ -53,6 +60,7 @@ a {
   -ms-transform: translate(50%, 50%);
   -o-transform: translate(50%, 50%);
 }
+
 .mainNav .title::before {
   width: 12px;
   height: 12px;
@@ -64,21 +72,25 @@ a {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+
 .mainNav .title::after {
   width: 100px;
   height: 2px;
   background-color: black;
   z-index: -1;
 }
+
 @media (max-width: 768px) {
   .mainNav .title::before,
   .mainNav .title::after {
     display: none;
   }
 }
+
 .mainNav .links {
   margin: 40px 30px;
 }
+
 .mainNav .links li {
   cursor: pointer;
   margin-bottom: 10px;
@@ -94,16 +106,20 @@ a {
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
 }
+
 .mainNav .links li a {
   display: flex;
   justify-content: left;
 }
+
 .mainNav .links li.active {
   background-color: #f6f6f6;
 }
+
 .mainNav .links li:hover {
   background-color: #f6f6f6;
 }
+
 .mainNav .links i {
   font-size: 15px;
   margin-right: 10px;
@@ -114,21 +130,26 @@ a {
     display: none;
   }
 }
+
 /* ============================================ */
+
 /*   header */
 
 .sectinos {
   width: 100%;
 }
+
 .sectinos .header {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   box-shadow: 0 0 10px #ccc;
 }
+
 .sectinos .header .inp {
   position: relative;
 }
+
 .sectinos .header .inp i {
   position: absolute;
   top: 50%;
@@ -158,9 +179,11 @@ a {
   -ms-transition: width 0.5s;
   -o-transition: width 0.5s;
 }
+
 .sectinos .header .inp input:focus {
   width: 160px;
 }
+
 @media (max-width: 768px) {
   .sectinos .header .inp input {
     width: 80px;
@@ -169,14 +192,17 @@ a {
     width: 100px;
   }
 }
+
 .sectinos .header .inp input:focus::placeholder {
   color: transparent;
 }
+
 .sectinos .header .right {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .sectinos .header .right span {
   margin-right: 20px;
   position: relative;
@@ -196,21 +222,26 @@ a {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+
 .sectinos .header .right img {
   width: 35px;
 }
 
 /* end header */
+
 /* ==================================== */
+
 .sectinos .files {
   background-color: #f1f5f9;
   padding: 10px;
 }
+
 .sectinos .files > h1 {
   position: relative;
   margin: 0 10px 5px;
   padding: 25px;
 }
+
 .sectinos .files > h1::before,
 .sectinos .files > h1::after {
   position: absolute;
@@ -219,6 +250,7 @@ a {
   left: 30px;
   bottom: 5px;
 }
+
 .sectinos .files h1::before {
   width: 50px;
   background-color: black;
@@ -230,16 +262,19 @@ a {
   background-color: white;
   z-index: 1;
 }
+
 .sectinos .files .our-files {
   display: grid;
-  grid-template-columns: 80% 15%;
+  grid-template-columns: 70% 20%;
   justify-content: space-evenly;
 }
+
 @media (max-width: 1300px) {
   .sectinos .files .our-files {
     grid-template-columns: 60% 35%;
   }
 }
+
 @media (max-width: 992px) {
   .sectinos .files .our-files {
     display: flex;
@@ -252,6 +287,7 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 15px;
 }
+
 .sectinos .files .our-files .files-content .file {
   padding: 13px 8px;
   background-color: white;
@@ -265,46 +301,53 @@ a {
 .sectinos .files .our-files .files-content .file i {
   color: var(--second-color);
 }
+
 .sectinos .files .our-files .files-content .file .file-content img {
   width: 60px;
   margin-bottom: 15px;
-  transition: .8s;
-  -webkit-transition: .8s;
-  -moz-transition: .8s;
-  -ms-transition: .8s;
-  -o-transition: .8s;
+  transition: 0.8s;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -ms-transition: 0.8s;
+  -o-transition: 0.8s;
 }
+
 .sectinos .files .our-files .files-content .file:hover img {
-    transform: rotate(20deg);
-    -webkit-transform: rotate(20deg);
-    -moz-transform: rotate(20deg);
-    -ms-transform: rotate(20deg);
-    -o-transform: rotate(20deg);
+  transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
 }
+
 .sectinos .files .our-files .files-content .file .file-content {
   text-align: center;
   margin-top: 10px;
 }
+
 .sectinos .files .our-files .files-content .file .uploaded {
   border-bottom: 1px solid var(--gray-color);
   padding: 10px 0;
   color: var(--second-color);
   font-size: 13px;
 }
+
 .sectinos .files .our-files .files-content .file .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
 }
+
 .sectinos .files .our-files .files-content .file .footer p {
   color: var(--second-color);
   font-size: 13px;
 }
+
 .sectinos .files .our-files .files-statics {
   background-color: white;
   padding: 20px 15px;
-  height: 500px;
+  height: 450px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -316,6 +359,7 @@ a {
 .sectinos .files .our-files .files-statics h2 {
   margin-bottom: 10px;
 }
+
 .sectinos .files .our-files .files-statics .box {
   display: flex;
   justify-content: space-between;
@@ -329,6 +373,7 @@ a {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+
 .sectinos .files .our-files .files-statics .box .box-content {
   display: flex;
   align-items: center;
@@ -343,32 +388,40 @@ a {
   height: 30px;
   padding: 20px;
 }
+
 .sectinos .files .our-files .files-statics .box .box-content .pdf {
   background-color: rgb(0 117 255 / 20%);
   color: var(--main-btn-blue);
 }
+
 .sectinos .files .our-files .files-statics .box .box-content .image {
   background-color: rgb(34 197 94 / 20%);
   color: var(--green-color);
 }
+
 .sectinos .files .our-files .files-statics .box .box-content .word {
   background-color: rgb(244 67 54 / 20%);
   color: var(--red-color);
 }
+
 .sectinos .files .our-files .files-statics .box .box-content .csv {
   background-color: rgb(245 158 11 / 20%);
   color: var(--orange-color);
 }
+
 .sectinos .files .our-files .files-statics .box .count,
 .sectinos .files .our-files .files-statics .box .size {
   color: var(--second-color);
 }
+
 .sectinos .files .our-files .files-statics .box .box-content .type {
   margin-bottom: 5px;
 }
+
 .sectinos .files .our-files .files-statics .box p {
   font-size: 13px;
 }
+
 .sectinos .files .our-files .files-statics button {
   width: fit-content;
   display: block;
@@ -393,6 +446,7 @@ a {
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
 }
+
 .sectinos .files .our-files .files-statics button i {
   color: white;
   margin-right: 5px;
@@ -426,6 +480,7 @@ a {
   animation: uploadicone 0.8s infinite alternate;
   -webkit-animation: uploadicone 0.8s infinite alternate;
 }
+
 .sectinos .files .our-files .files-statics button:hover {
   background-color: #0359bc;
 }
