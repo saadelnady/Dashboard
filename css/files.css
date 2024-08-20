@@ -5,7 +5,6 @@
   font-family: "Open Sans", sans-serif;
   color: black;
 }
-
 :root {
   --main-btn-blue: #0075ff;
   --second-color: #888;
@@ -14,40 +13,43 @@
   --red-color: #f44336;
   --gray-color: #eee;
 }
-
 li {
   list-style-type: none;
 }
-
 a {
   text-decoration: none;
 }
 
 /* ============================== */
-
 .our_page {
   display: flex;
   align-items: flex-start;
   justify-content: start;
 }
-
 .mainNav {
   max-width: 250px;
+  background-color: #fff;
+  z-index: 100;
+  height: 100%;
 }
-
 @media (max-width: 768px) {
   .mainNav {
     max-width: 80px;
+    position: fixed;
+    top: 0;
+    display: none;
   }
 }
-
+.mainNav.active {
+  left: 0;
+  display: block;
+}
 .mainNav .title {
   padding: 20px 0 20px;
   font-weight: bold;
   text-align: center;
   position: relative;
 }
-
 .mainNav .title::before,
 .mainNav .title::after {
   content: "";
@@ -60,7 +62,6 @@ a {
   -ms-transform: translate(50%, 50%);
   -o-transform: translate(50%, 50%);
 }
-
 .mainNav .title::before {
   width: 12px;
   height: 12px;
@@ -72,29 +73,32 @@ a {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-
 .mainNav .title::after {
   width: 100px;
   height: 2px;
   background-color: black;
   z-index: -1;
 }
-
 @media (max-width: 768px) {
   .mainNav .title::before,
   .mainNav .title::after {
     display: none;
   }
 }
-
 .mainNav .links {
   margin: 40px 30px;
 }
-
+@media (max-width: 768px) {
+  .mainNav .links {
+    margin: 40px 15px;
+  }
+  .mainNav .links li a i {
+    margin: 0 auto;
+  }
+}
 .mainNav .links li {
   cursor: pointer;
   margin-bottom: 10px;
-  padding: 10px 30px 10px 5px;
   border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -106,20 +110,18 @@ a {
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
 }
-
 .mainNav .links li a {
   display: flex;
   justify-content: left;
+  width: 100%;
+  padding: 10px 30px 10px 5px;
 }
-
 .mainNav .links li.active {
   background-color: #f6f6f6;
 }
-
 .mainNav .links li:hover {
   background-color: #f6f6f6;
 }
-
 .mainNav .links i {
   font-size: 15px;
   margin-right: 10px;
@@ -129,27 +131,38 @@ a {
   .mainNav .links li span {
     display: none;
   }
+  .mainNav .links li a {
+    padding: 10px;
+  }
+  .mainNav .links li i {
+    font-size: 20px;
+  }
 }
-
+#burger {
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+@media (min-width: 768px) {
+  #burger {
+    display: none;
+  }
+}
 /* ============================================ */
-
 /*   header */
 
 .sectinos {
   width: 100%;
 }
-
 .sectinos .header {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   box-shadow: 0 0 10px #ccc;
 }
-
 .sectinos .header .inp {
   position: relative;
 }
-
 .sectinos .header .inp i {
   position: absolute;
   top: 50%;
@@ -179,30 +192,17 @@ a {
   -ms-transition: width 0.5s;
   -o-transition: width 0.5s;
 }
-
 .sectinos .header .inp input:focus {
   width: 160px;
 }
-
-@media (max-width: 768px) {
-  .sectinos .header .inp input {
-    width: 80px;
-  }
-  .sectinos .header .inp input:focus {
-    width: 100px;
-  }
-}
-
 .sectinos .header .inp input:focus::placeholder {
   color: transparent;
 }
-
 .sectinos .header .right {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .sectinos .header .right span {
   margin-right: 20px;
   position: relative;
@@ -222,7 +222,6 @@ a {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-
 .sectinos .header .right img {
   width: 35px;
 }
